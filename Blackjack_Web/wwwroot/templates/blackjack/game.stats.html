@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<section>
+    <div class="page-header">
+        <h1>Blackjack Statistics</h1>
+    </div>
+    <div>
+        <h2>This Table</h2>
+        <div>
+            <h3>Dealer</h3>
+            <span>Total Hands Won: </span>
+            <span ng-bind="vm.stats.tableDealerWins"></span>
+        </div>
+        <div>
+            <h3>Player</h3>
+            <span>Total Hands Won: </span>
+            <span ng-bind="vm.stats.tablePlayerWins"></span>
+        </div>
+        <div>
+            <h2>All Time</h2>
+            <div>
+                <h3>Dealer</h3>
+                <span>Total Hands Won: </span>
+                <span ng-bind="vm.stats.allTimeDealerWins"></span>
+            </div>
+            <div>
+                <h3>Player</h3>
+                <span>Total Hands Won: </span>
+                <span ng-bind="vm.stats.allTimePlayerWins"></span>
+            </div>
+        </div>
+        <button class="btn" ng-click="vm.returnToGame()">Return to Game</button>
+    </div>
+</section>
+

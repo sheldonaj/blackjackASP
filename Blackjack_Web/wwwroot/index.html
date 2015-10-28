@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <base href="/">
+    <title>BlackJack</title>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular-resource.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular-animate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-utils/0.1.1/angular-ui-utils.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.14.2/ui-bootstrap-tpls.min.js"></script>
+    <script type="text/javascript" src="js/app/config.js"></script>
+    <script type="text/javascript" src="js/app/init.js"></script>
+    <script type="text/javascript" src="js/core/core.client.module.js"></script>
+    <script type="text/javascript" src="js/blackjack/game.client.module.js"></script>
+    <script type="text/javascript" src="js/app/ngConstants.js"></script>
+    <script type="text/javascript" src="js/core/routes/core.client.routes.js"></script>
+    <script type="text/javascript" src="js/blackjack/routes/game.client.routes.js"></script>
+    <script type="text/javascript" src="js/blackjack/controllers/game.controller.js"></script>
+    <script type="text/javascript" src="js/blackjack/services/game.service.js"></script>
+</head>
+<body>
+    <section class="content">
+        <section class="container">
+            <section ui-view></section>
+        </section>
+    </section>
+</body>
+</html>

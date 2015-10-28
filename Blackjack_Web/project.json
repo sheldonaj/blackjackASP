@@ -1,0 +1,44 @@
+﻿{
+  "webroot": "wwwroot",
+  "userSecretsId": "aspnet5-WebApplication2-43917400-c9a2-4425-914a-c4ff6aeb7be2",
+  "version": "1.0.0-*",
+
+  "dependencies": {
+    "Microsoft.AspNet.Server.IIS": "1.0.0-beta5",
+    "Microsoft.AspNet.Server.WebListener": "1.0.0-beta5",
+    "Microsoft.AspNet.StaticFiles": "1.0.0-beta5",
+    "Microsoft.Framework.Configuration.Abstractions": "1.0.0-beta5",
+    "Microsoft.Framework.Configuration.Json": "1.0.0-beta5",
+    "Microsoft.Framework.Configuration.UserSecrets": "1.0.0-beta5",
+    "Microsoft.Framework.Logging": "1.0.0-beta5",
+    "Microsoft.Framework.Logging.Console": "1.0.0-beta5",
+    "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0-beta5",
+    "Microsoft.AspNet.Diagnostics": "1.0.0-beta5",
+    "Microsoft.AspNet.Diagnostics.Entity": "7.0.0-beta5"
+  },
+
+  "commands": {
+    "web": "Microsoft.AspNet.Hosting --config hosting.ini"
+  },
+
+  "frameworks": {
+    "dnx451": { },
+    "dnxcore50": { }
+  },
+
+  "exclude": [
+    "wwwroot",
+    "node_modules",
+    "bower_components"
+  ],
+  "publishExclude": [
+    "node_modules",
+    "bower_components",
+    "**.xproj",
+    "**.user",
+    "**.vspscc"
+  ],
+  "scripts": {
+    "prepublish": [ "npm install", "bower install", "gulp clean", "gulp production:config", "gulp min" ]
+  }
+}

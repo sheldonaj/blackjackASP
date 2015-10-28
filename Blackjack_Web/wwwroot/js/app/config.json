@@ -1,0 +1,5 @@
+{
+  "development": { "ApiEndpoint": "http://localhost:15774/api/games/" },
+  "production": { "ApiEndpoint": "http://mongotesterapi.azurewebsites.net/api/games/" }
+}
+
