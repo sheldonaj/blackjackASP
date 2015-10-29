@@ -49,12 +49,39 @@ namespace blackjack.Models
 
         internal int GetPlayerScore()
         {
-            return 10;
+            return getScore(Player.cards);
         }
 
         internal int GetDealerScore()
         {
-            return 20;
+            return getScore(Dealer.cards);
         }
+
+        private static int getScore(IEnumerable<int> hand)
+        {
+            var cards = getCardRanks(hand);
+
+            return cards.Sum(card => getCardScore(card));
+        }
+
+        private static IEnumerable<int> getCardRanks(IEnumerable<int> cards)
+        {
+            return from card in cards
+                   select (card % 13) + 1;
+        }
+
+        private static int getCardScore(int card)
+        {
+            if (card == 1)
+            {
+                return 11;
+            }
+            else if (card >= 11)
+            {
+                return 10;
+            }
+            return card;
+        }
+
     }
 }

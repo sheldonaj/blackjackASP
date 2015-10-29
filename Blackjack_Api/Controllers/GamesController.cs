@@ -22,10 +22,10 @@ namespace blackjack.Controllers
             return new string[] { "value1", "value2" };
         }
 
-        // GET: api/Games/5
-        public async Task<IHttpActionResult> Get(int id)
+        // GET: api/Games/1234
+        public async Task<IHttpActionResult> Get(string id)
         {
-            var gameDocument = await _games.GetGame("5");
+            var gameDocument = await _games.GetGame(id);
             if (gameDocument == null)
             {
                 return NotFound();
